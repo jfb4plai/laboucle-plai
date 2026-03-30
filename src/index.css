@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #edeae5;
+    color: #1c1917;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+  }
+}
+
+@layer utilities {
+  .narrator {
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    color: #3d2b1f;
+    line-height: 1.75;
+  }
+  .response-narrator {
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    color: #1a5c2a;
+    line-height: 1.75;
+  }
+}
