@@ -9,6 +9,7 @@ export const scenes: Record<string, Scene> = {
   // ═══════════════════════════════
   intro: {
     id: 'intro',
+    dimension: 'dis',
     narration: "Mme Lambert pose la pile de copies sur le coin du bureau. Elles glissent une à une jusqu'aux élèves. La tienne arrive face tournée vers le bas. Tu la retournes : 11/20, cerclé en rouge, coin supérieur droit. Dessous, trois lignes serrées au stylo rouge.",
     choices: [
       {
@@ -37,10 +38,10 @@ export const scenes: Record<string, Scene> = {
       },
     ],
     fac: {
-      mechanism: 'Stratégie d\'évitement (choix A & B) — Dimension DISPOSITIONS',
-      reference: 'Brault Foisy, L.-M. (2022). Mieux comprendre les mécanismes cérébraux d\'apprentissage pour faciliter la réussite scolaire.',
-      riss_id: 'W4225545444',
-      implication: 'L\'élève protège son estime de soi en évitant l\'information corrective. La rétroaction n\'a d\'effet neurologique que si elle est activement traitée — l\'évitement est rationnel à court terme et dévastateur à long terme.',
+      mechanism: 'Feedback paradox — Dimension DISPOSITIONS',
+      reference: 'Hausman, M. et al. (2025). Analysis of the Emotions and Emotional Skills of University Students in Processing Distance Formative Feedback. [citant Carless & Boud, 2018]',
+      riss_id: '1118375ar',
+      implication: 'Malgré des quantités croissantes de rétroaction, les élèves peinent à en tirer profit. La cause n\'est pas l\'absence de feedback, mais l\'incapacité à le traiter (Carless & Boud, 2018). Les choix A et B illustrent deux formes d\'évitement qui protègent l\'estime de soi à court terme — et bloquent l\'apprentissage à long terme.',
     },
   },
 
@@ -49,6 +50,7 @@ export const scenes: Record<string, Scene> = {
   // ═══════════════════════════════
   remarque1: {
     id: 'remarque1',
+    dimension: 'con',
     narration: "Premier bloc, en marge du premier paragraphe :",
     copy: {
       text: '« Introduction : manque de structure. Développe ta thèse dès l\'entrée. »',
@@ -81,16 +83,17 @@ export const scenes: Record<string, Scene> = {
       },
     ],
     fac: {
-      mechanism: 'Compréhension superficielle vs clarification active — Dimension CONCEPTION',
-      reference: 'Altinsoy, M. (2025). Les évaluations scolaires comme levier d\'autorégulation et de développement des compétences métacognitives.',
-      riss_id: 'dumas-05324645',
-      implication: 'L\'élève qui ne vérifie pas sa compréhension reste dans l\'illusion de compréhension. La demande de clarification (choix C) est un marqueur d\'autorégulation — pas un aveu de faiblesse.',
+      mechanism: 'Demander des clarifications : force, pas faiblesse — Dimension CONCEPTION',
+      reference: 'Rezzonico, L. (2024). Demander de l\'aide en mathématiques pour apprendre ou pour avancer sans effort ? [citant Karabenick & Newman, 2006]',
+      riss_id: 'W4399227244',
+      implication: 'Les élèves évitent de demander de l\'aide pour ne pas paraître incapables (Karabenick & Newman, 2006). Pourtant, la demande de clarification est le marqueur le plus fiable d\'un apprenant autorégulé. Le choix C — lever la main — est le comportement le plus rare en classe et le plus décisif pour la progression.',
     },
   },
 
   // Scène intermédiaire : Lambert répond
   lambert_repond: {
     id: 'lambert_repond',
+    dimension: 'con',
     narration: 'Mme Lambert marque un temps. Elle répond : « Bonne question. Non — une thèse, c\'est ta position sur le sujet, formulée clairement. Pas forcément \'je pense que\', mais quelque chose comme : \'Le développement technologique menace davantage qu\'il ne protège la vie privée.\' »',
     choices: [
       {
@@ -103,10 +106,10 @@ export const scenes: Record<string, Scene> = {
       },
     ],
     fac: {
-      mechanism: 'La clarification transforme la relation pédagogique — Dimension DISPOSITION + CONCEPTION',
-      reference: 'Clayton Bernard, R. (2024). Autorégulation, co-régulation et régulation partagée des apprentissages. (citant Nicol & Macfarlane-Dick, 2006)',
+      mechanism: 'Modélisation experte : l\'enseignant verbalise ses critères — Dimension CONCEPTION',
+      reference: 'Clayton Bernard, R. (2024). Autorégulation, co-régulation et régulation partagée des apprentissages. [citant Nicol & Macfarlane-Dick, 2006]',
       riss_id: 'tel-04726605',
-      implication: 'L\'élève devient acteur de sa compréhension. Cette posture, rarement enseignée, est décisive pour la réussite au supérieur où personne ne rappelle de demander des clarifications.',
+      implication: 'Quand l\'enseignant explicite ses critères à voix haute, l\'élève accède au raisonnement évaluatif expert (Nicol & Macfarlane-Dick, 2006). Cette co-construction du sens des critères est décisive : sans elle, l\'élève reste dans une compréhension floue de ce qu\'on attend de lui.',
     },
   },
 
@@ -115,6 +118,7 @@ export const scenes: Record<string, Scene> = {
   // ═══════════════════════════════
   remarque2: {
     id: 'remarque2',
+    dimension: 'lit',
     narration: "Deuxième bloc, en marge droite, au milieu de la copie :",
     copy: {
       text: '« Tu es intelligent(e), tu peux mieux faire. »',
@@ -148,9 +152,9 @@ export const scenes: Record<string, Scene> = {
     ],
     fac: {
       mechanism: 'Rétroaction ego-orientée vs tâche-orientée — Dimension LITTÉRATIE',
-      reference: 'Georget, M. & Amourdom, A. (2025). Favoriser le sentiment de compétence en production d\'écrits : enjeux et leviers pédagogiques au cycle 2.',
-      riss_id: 'dumas-05110873',
-      implication: 'Le feedback centré sur la personne ("tu es intelligent") réduit la persévérance face à la difficulté. Seul le feedback centré sur la tâche et le processus est actionnable. L\'élève doit apprendre à discriminer les deux — cette compétence n\'est jamais enseignée.',
+      reference: 'Calone, A. & Lafontaine, D. (2023). L\'impact des différents types de feedbacks en contexte de classe. [citant Kluger & DeNisi, 1996 ; Dweck, 2006]',
+      riss_id: 'hal-04646895',
+      implication: 'La rétroaction centrée sur la personne ("tu es intelligent") diminue la persévérance face à la difficulté (Dweck, 2006) et peut réduire la performance (Kluger & DeNisi, 1996). Seul le feedback centré sur la tâche est actionnable. Apprendre à discriminer ces deux types est une compétence rarement enseignée — et pourtant décisive.',
     },
   },
 
@@ -159,6 +163,7 @@ export const scenes: Record<string, Scene> = {
   // ═══════════════════════════════
   remarque3: {
     id: 'remarque3',
+    dimension: 'lit',
     narration: "Troisième bloc, en bas de page, cerclé en rouge :",
     copy: {
       text: '« Arguments sans exemples concrets — 3 points perdus »',
@@ -191,10 +196,10 @@ export const scenes: Record<string, Scene> = {
       },
     ],
     fac: {
-      mechanism: 'Du diagnostic à l\'action — Dimension LITTÉRATIE + APPROPRIATION',
-      reference: 'Lepareur, C. (2016). L\'évaluation dans les enseignements scientifiques fondés sur l\'investigation : effets de différentes modalités d\'évaluation formative sur l\'autorégulation.',
+      mechanism: 'Du diagnostic à l\'action : traduire le commentaire en critère — Dimension LITTÉRATIE',
+      reference: 'Lepareur, C. (2016). L\'évaluation formative et l\'autorégulation des apprentissages. [citant Sadler, 1989 ; Nicol & Macfarlane-Dick, 2006]',
       riss_id: 'tel-01488023',
-      implication: 'Comprendre le problème n\'est pas suffisant (choix A). Il faut transformer le diagnostic en stratégie de révision concrète, avec un critère de réussite vérifiable. Cette étape — rarement enseignée — est le pivot entre compréhension et progression réelle.',
+      implication: 'Les élèves ne peuvent progresser que s\'ils comprennent l\'écart entre leur production et l\'objectif visé ET savent comment le combler (Sadler, 1989). Comprendre le problème (choix A) n\'est pas suffisant : il faut transformer le diagnostic en stratégie vérifiable. Cette étape est rarement enseignée.',
     },
   },
 
@@ -203,6 +208,7 @@ export const scenes: Record<string, Scene> = {
   // ═══════════════════════════════
   act2_low: {
     id: 'act2_low',
+    dimension: 'app',
     narration: "Deux jours plus tard. Le travail est à réviser pour vendredi. Tu rouvres ta copie. Tu te souviens vaguement du commentaire sur la structure. Tu réécris l'introduction au feeling. Mieux ? Peut-être. Tu rends.",
     choices: [
       {
@@ -223,10 +229,10 @@ export const scenes: Record<string, Scene> = {
       },
     ],
     fac: {
-      mechanism: 'Révision sans stratégie — Dimension APPROPRIATION absente',
-      reference: 'Levy, L. (2021). L\'évaluation : un moyen pour favoriser le développement d\'une réflexion métacognitive ?',
-      riss_id: 'dumas-03442326',
-      implication: 'Sans plan de révision ancré dans les critères, la relecture tourne en rond. L\'élève modifie sa copie selon son intuition, pas selon les attendus. Le résultat est aléatoire.',
+      mechanism: 'Révision sans critère = modification aléatoire — Dimension APPROPRIATION',
+      reference: 'Teng, M.F. & Ma, M. (2024). Assessing metacognition-based student feedback literacy for academic writing. [citant Carless & Boud, 2018]',
+      riss_id: 'hal-04963137',
+      implication: 'Sans plan de révision ancré dans des critères explicites, la relecture tourne en rond (Carless & Boud, 2018). L\'élève modifie sa copie selon son intuition, pas selon les attendus. Le résultat est aléatoire — et décourageant car incompréhensible.',
     },
   },
 
@@ -235,6 +241,7 @@ export const scenes: Record<string, Scene> = {
   // ═══════════════════════════════
   act2_mid: {
     id: 'act2_mid',
+    dimension: 'app',
     narration: "Tu ouvres un nouveau document. Ton premier argument : \"Le développement technologique fragilise la vie privée.\" Tu t'arrêtes. L'exemple. Cambridge Analytica ? Facebook ? Tu notes quelque chose. Deuxième argument — tu bloques.",
     choices: [
       {
@@ -255,10 +262,10 @@ export const scenes: Record<string, Scene> = {
       },
     ],
     fac: {
-      mechanism: 'Persévérance dans l\'effort de révision — Dimension APPROPRIATION + DISPOSITIONS',
-      reference: 'Parada, S. (2020). Mindset, bien-être et réussite académique : articulation de la mentalité malléable et de la motivation.',
+      mechanism: 'Persévérance dans l\'effort de révision — Dimension APPROPRIATION',
+      reference: 'Parada, S. (2020). Mindset, bien-être et réussite académique. [citant Dweck, 2006 ; Zimmerman, 2002]',
       riss_id: 'tel-03767540',
-      implication: 'La mentalité de croissance (Dweck, 2006) se manifeste ici concrètement : croire que l\'effort de révision a une valeur, même quand c\'est inconfortable. Cette croyance se construit — elle n\'est pas innée.',
+      implication: 'La mentalité de croissance (Dweck, 2006) se manifeste dans la persévérance face à l\'obstacle : croire que l\'effort supplémentaire a une valeur. Zimmerman (2002) montre que les apprenants autorégulés maintiennent leur stratégie face à la difficulté — ils ne l\'abandonnent pas au premier blocage.',
     },
   },
 
@@ -267,6 +274,7 @@ export const scenes: Record<string, Scene> = {
   // ═══════════════════════════════
   act2_high: {
     id: 'act2_high',
+    dimension: 'app',
     narration: "Tu sors ta checklist. Tu relis ton travail critère par critère. Premier argument : exemple présent ✓. Introduction : thèse claire ? Tu hésites. Tu reformules. Deuxième argument : exemple présent ✓.",
     choices: [
       {
@@ -287,10 +295,10 @@ export const scenes: Record<string, Scene> = {
       },
     ],
     fac: {
-      mechanism: 'Journal de rétroaction = métacognition active — Dimension APPROPRIATION',
-      reference: 'Levy, L. (2021). L\'évaluation : un moyen pour favoriser le développement d\'une réflexion métacognitive ?',
-      riss_id: 'dumas-03442326',
-      implication: 'La réflexion sur son propre processus de révision développe une autorégulation durable, pas seulement une performance ponctuelle. C\'est la différence entre "j\'ai corrigé cette copie" et "j\'ai appris à corriger".',
+      mechanism: 'Journal de rétroaction : métacognition et autorégulation — Dimension APPROPRIATION',
+      reference: 'Da Silva, S. (2025). Autoréguler sa motivation et s\'en sentir capable. [citant Schunk & Zimmerman, 2002]',
+      riss_id: 'W4411811193',
+      implication: 'L\'apprentissage autorégulé (Zimmerman, 2002) se caractérise par la réflexion sur son propre processus. Le journal de rétroaction installe ce réflexe : "Qu\'ai-je appris ? Que dois-je encore comprendre ? Quelle est ma prochaine action ?" C\'est la différence entre corriger une copie et apprendre à corriger.',
     },
   },
 

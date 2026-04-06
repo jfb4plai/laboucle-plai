@@ -36,6 +36,7 @@ export type Scene = {
   copy?: CopyAnnotation;
   choices?: Choice[];
   fac?: FacNote;
+  dimension?: 'dis' | 'con' | 'lit' | 'app';  // dimension principale de la scène
   // endings
   is_ending?: boolean;
   ending_type?: 'A' | 'B' | 'C';
